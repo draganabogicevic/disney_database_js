@@ -1,0 +1,186 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Sriracha", cursive;
+}
+a {
+  color: black;
+}
+a:hover {
+  cursor: pointer;
+  color: black;
+}
+nav {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu {
+  padding: 0 20px;
+}
+.disneyLogo {
+  padding: 0 20px;
+  font-size: 50px;
+}
+.button {
+  margin: 0 5px;
+  padding: 5px;
+  min-width: 100px;
+  border: 1px solid darkcyan;
+  border-radius: 8px;
+  background-color: rgb(46, 46, 46);
+  color: white;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.search {
+  background: none;
+  border: none;
+  border-bottom: 1px solid darkcyan;
+}
+.search:active,
+.search:focus {
+  outline: none;
+}
+main {
+  background-color: skyblue;
+}
+.controls {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 50px;
+}
+.cardContainer {
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 50px 0;
+}
+.invisible {
+  opacity: 0;
+}
+.card {
+  border: 1px solid darkcyan;
+  background: white;
+  height: 270px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 9px 9px 8px -1px rgba(87, 155, 201, 1);
+  transition: all ease-in-out 1s;
+}
+
+.characterName {
+  text-align: center;
+  color: skyblue;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+@keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+.container {
+  width: 100%;
+  background-image: url(cloud4.png);
+  background-repeat: repeat;
+  animation: animatedBackground 30s linear infinite alternate;
+}
+.cardControls {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.heart {
+  font-size: 20px;
+}
+.modal {
+  width: minmax(70%, 30%);
+  margin: auto;
+  background-color: white;
+  border: 1px solid darkcyan;
+  box-shadow: 9px 9px 8px -1px rgba(87, 155, 201, 1);
+  border-radius: 8px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  display: grid;
+  grid-template-areas: "img details";
+}
+.modalImg {
+  grid-area: "img";
+  height: 100%;
+  border-radius: 8px;
+  align-self: flex-start;
+}
+
+.characterDeatils {
+  padding: 20px;
+  grid-area: "details";
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.button.modalBtn {
+  align-self: flex-end;
+}
+.hidden {
+  visibility: hidden;
+}
+
+/* 
+.rate {
+  float: left;
+  height: 46px;
+  padding: 0 10px;
+}
+.rate:not(:checked) > input {
+  position: absolute;
+  top: -9999px;
+}
+.rate:not(:checked) > label {
+  float: right;
+  width: 1em;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 30px;
+  color: #ccc;
+}
+.rate:not(:checked) > label:before {
+  content: "★ ";
+}
+.rate > input:checked ~ label {
+  color: #ffc700;
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+  color: #deb217;
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+  color: #c59b08;
+} */

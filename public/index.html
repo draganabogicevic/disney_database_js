@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <title>Disney database</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oleo+Script&family=Sriracha&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script defer src="bundle.js"></script>
+  </head>
+  <body>
+    <nav>
+      <div>
+        <ion-icon src="disney.svg" size="50px" class="disneyLogo"></ion-icon>
+      </div>
+      <div class="menu">
+        <button class="button favorite">My Favorite</button>
+        <button class="button about">About</button>
+        <ion-icon name="moon"></ion-icon>
+      </div>
+    </nav>
+    <main>
+      <div class="controls">
+        <button class="button prev">Show previous</button>
+        <form>
+          <ion-icon name="search"></ion-icon>
+          <input type="text" class="search" />
+        </form>
+        <button class="button next">Show next</button>
+      </div>
+      <div class="container"></div>
+      <div class="modal hidden"></div>
+    </main>
+    <footer></footer>
+  </body>
+</html>
